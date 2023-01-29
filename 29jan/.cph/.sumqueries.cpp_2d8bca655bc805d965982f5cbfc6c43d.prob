@@ -1,0 +1,1 @@
+{"name":"Local: sumqueries","url":"/home/sezal/VSC/Placewit/29jan/sumqueries.cpp","tests":[{"id":1674973893301,"input":"3 4 2\n1 2 3 4\n1 0 1 2\n1 3 2 2\n\n1 2 2 3\n0 1 1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/29jan/sumqueries.cpp","group":"local","local":true}
