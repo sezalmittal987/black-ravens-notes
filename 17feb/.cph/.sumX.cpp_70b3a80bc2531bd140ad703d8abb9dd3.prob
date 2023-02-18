@@ -1,0 +1,1 @@
+{"name":"Local: sumX","url":"/home/sezal/VSC/Placewit/17feb/sumX.cpp","tests":[{"id":1676714582462,"input":"5 5 9\n1 2 4 5 7\n5 6 3 4 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/17feb/sumX.cpp","group":"local","local":true}
