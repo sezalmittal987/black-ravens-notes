@@ -1,0 +1,1 @@
+{"name":"Local: postfixEval","url":"/home/sezal/VSC/Placewit/25feb/postfixEval.cpp","tests":[{"id":1677321125375,"input":"11\n2 3 * 4 2  / + 4 - 5 *","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/25feb/postfixEval.cpp","group":"local","local":true}
