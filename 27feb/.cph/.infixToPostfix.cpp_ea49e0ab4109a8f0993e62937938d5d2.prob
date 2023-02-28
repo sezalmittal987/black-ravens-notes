@@ -1,0 +1,1 @@
+{"name":"Local: infixToPostfix","url":"/home/sezal/VSC/Placewit/27feb/infixToPostfix.cpp","tests":[{"id":1677513892383,"input":"a*b+c/e+f-g+h","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/27feb/infixToPostfix.cpp","group":"local","local":true}

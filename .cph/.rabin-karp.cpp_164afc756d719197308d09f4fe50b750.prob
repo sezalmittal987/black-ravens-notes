@@ -1,0 +1,1 @@
+{"name":"Local: rabin-karp","url":"/home/sezal/VSC/Placewit/rabin-karp.cpp","tests":[{"id":1677601635739,"input":"abcaba\naba","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/rabin-karp.cpp","group":"local","local":true}

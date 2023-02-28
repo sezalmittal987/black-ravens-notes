@@ -1,0 +1,1 @@
+{"name":"Local: findPattern","url":"/home/sezal/VSC/Placewit/27feb/findPattern.cpp","tests":[{"id":1677514888495,"input":"ababababababa\naba","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/27feb/findPattern.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: findPalindrome","url":"/home/sezal/VSC/Placewit/28feb/findPalindrome.cpp","tests":[{"id":1677603688284,"input":"abaabaaab","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/28feb/findPalindrome.cpp","group":"local","local":true}
