@@ -1,1 +1,1 @@
-{"name":"Local: manachers","url":"/home/sezal/VSC/Placewit/28feb/manachers.cpp","tests":[{"id":1677606528229,"input":"abaabaaab","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/28feb/manachers.cpp","group":"local","local":true}
+{"name":"Local: manachers","url":"/home/sezal/VSC/Placewit/28feb/manachers.cpp","tests":[{"id":1677606528229,"input":"abcbc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/28feb/manachers.cpp","group":"local","local":true}

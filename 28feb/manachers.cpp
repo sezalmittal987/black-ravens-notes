@@ -20,18 +20,18 @@ int main(){
     m[0] = 1;
     for( int i = 1 ; i < z ; i++){
         // inside
-        if( r >= i and 2*(r - i) + 1 > m[l + r  - i] ){
+        if( r >= i and l < l + r - i - (m[l + r - i ] - 1)/2 ){
             m[i] = m[l + r - i];
         }
-        // out or on
+        // out or on the window
         else{
-            // take common part between window and palindrome of mirror
-            // adjust our l value
+            // common part of the current palindrome and palindrome of mirrow
             if( r < i ) l = i, r = i;
-            else l = i - r +i  ;
-
+            else{
+                l = 2*i - r;
+            }
             // expand l and r
-            while( l > 0 and r < z- 1 and  a[l-1] == a[r+1]) {
+            while( l > 0 and r  < z - 1 and a[l-1] == a[r + 1]) {
                 l--;
                 r++;
             }
