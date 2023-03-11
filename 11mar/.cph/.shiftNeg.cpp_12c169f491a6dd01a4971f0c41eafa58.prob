@@ -1,0 +1,1 @@
+{"name":"Local: shiftNeg","url":"/home/sezal/VSC/Placewit/11mar/shiftNeg.cpp","tests":[{"id":1678524336196,"input":"-3","output":""},{"id":1678524341951,"input":"3","output":""},{"id":1678524346725,"input":"-7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/11mar/shiftNeg.cpp","group":"local","local":true}
