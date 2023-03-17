@@ -1,0 +1,1 @@
+{"name":"Local: matrixExpo","url":"/home/sezal/VSC/Placewit/17mar/matrixExpo.cpp","tests":[{"id":1679072687423,"input":"2 2\n12 11\n10 13","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/17mar/matrixExpo.cpp","group":"local","local":true}
