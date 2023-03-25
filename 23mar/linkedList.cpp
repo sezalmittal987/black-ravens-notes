@@ -17,12 +17,12 @@ bool search(Node* head, int x){
     return false;
 }
 
-void insertLast( Node* head, int x){
+Node* insertLast( Node* head, int x){
     if( !head ) {
         head = new Node();
         head->data = x;
         head->next = NULL;
-        return;
+        return head;
     }
     Node* curr = head;
     while(curr->next){
@@ -31,6 +31,7 @@ void insertLast( Node* head, int x){
     curr->next = new Node();
     curr->next->data = x;
     curr->next->next = NULL;
+    return head;
 }
 
 void printLL(Node* head){
@@ -59,8 +60,8 @@ int main(){
 
     // insertLast(head, 5);
     // printLL(head);
-    Node* head2;
-    cout<<head2->data<<endl;
-    // insertLast(head2, 6);
-    // printLL(head2);
+    Node* head2 = NULL;
+    cout<<head2<<endl;
+    head2 = insertLast(head2, 6);
+    printLL(head2);
 }
