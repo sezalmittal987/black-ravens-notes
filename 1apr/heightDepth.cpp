@@ -20,6 +20,7 @@ class TreeNode{
 };
 
 int Tdepth = 0 ; 
+// depth of a node, height of the subtree
 int findDepthHeightS(TreeNode* root, int depth){
     if(!root) return;
     root->depth = depth;
@@ -30,6 +31,7 @@ int findDepthHeightS(TreeNode* root, int depth){
     return root->heightS;
 }
 
+// height of the node
 void findHeight(TreeNode* root){
     if(!root) return;
     root->height = Tdepth - root->depth;
