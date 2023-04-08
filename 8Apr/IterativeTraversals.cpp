@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<queue>
+#include<stack>
 using namespace std;
 
 class TreeNode{
@@ -15,60 +16,46 @@ class TreeNode{
     }
 };
 
-vector<int> levelOrderTraversal(TreeNode* root){
-    vector<int> ans;
-    queue<TreeNode*> q;
-    q.push(root);
-    while(!q.empty()){
-        auto p = q.front();
-        ans.push_back(p->data);
-        q.pop();
-        if( p->left) q.push(p->left);
-        if( p->right) q.push(p->right);
-    }
-    return ans;
-}
 
 void inorder(TreeNode* root){
-    if( !root ) return;
-    inorder(root->left);
-    cout<<root->data<<" ";
-    inorder(root->right);
-}
-
-void inorderRev(TreeNode* root){
-    if( !root ) return;
-    inorderRev(root->right);
-    cout<<root->data<<" ";
-    inorderRev(root->left);
+    stack<TreeNode*> s;
+    s.push(root);
+    while(s.top()->left) s.push(s.top()->left);
+    while(!s.empty()){
+        cout<<s.top()->data<<" ";
+        auto p = s.top();
+        s.pop();
+        if(p->right){
+            s.push(p->right);
+            while(s.top()->left) s.push(s.top()->left);
+        }
+    }
 }
 
 void preorder (TreeNode* root){
-    if( !root ) return;
+    stack<TreeNode*> s;
+    s.push(root);
     cout<<root->data<<" ";
-    preorder(root->left);
-    preorder(root->right);
-}
-
-void preorderRev (TreeNode* root){
-    if( !root ) return;
-    preorderRev(root->right);
-    preorderRev(root->left);
-    cout<<root->data<<" ";
+    while(s.top()->left){
+        s.push(s.top()->left); 
+        cout<<s.top()->data<<" ";
+    }
+    while(!s.empty()){
+        auto p = s.top();
+        s.pop();
+        if(p->right){
+            s.push(p->right);
+            cout<<s.top()->data<<" ";
+            while(s.top()->left){
+                s.push(s.top()->left); 
+                cout<<s.top()->data<<" ";
+            }
+        }
+    }
 }
 
 void postorder(TreeNode* root){
-    if( !root ) return;
-    postorder(root->left);
-    postorder(root->right);
-    cout<<root->data<<" ";
-}
-
-void postorderRev(TreeNode* root){
-    if( !root ) return;
-    cout<<root->data<<" ";
-    postorderRev(root->right);
-    postorderRev(root->left);
+    
 }
 
 int main(){
@@ -99,19 +86,8 @@ int main(){
     eleven->right = twelve;
     inorder(root);
     cout<<endl;
-    inorderRev(root);
-    cout<<endl;
     preorder(root);
     cout<<endl;
-    preorderRev(root);
-    cout<<endl;
     postorder(root);
-    cout<<endl;
-    postorderRev(root);
-    cout<<endl;
-    vector<int> ans = levelOrderTraversal(root);
-    for(int i = 0 ; i < ans.size(); i++ ){
-        cout<<ans[i]<<" ";
-    }
     cout<<endl;
 }
