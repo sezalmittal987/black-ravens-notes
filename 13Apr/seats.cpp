@@ -26,3 +26,25 @@ int Solution::seats(string A) {
     }
     return ans%(10000003);
 }
+
+
+// solution 2
+
+int Solution::seats(string A) {
+    const int mod = 1e7+3;
+    int n = A.size();
+    int cnt = 0, ans = 0, xcnt = 0;
+    for(int i = 0; i < A.size(); i++){
+        xcnt += (A[i] == 'x');
+    }
+    for(int i = 0; i < A.size(); i++){
+        if(A[i] == 'x'){
+            cnt++;
+        }
+        else{
+            int Min = min(cnt,xcnt - cnt);
+            ans = (ans+min) % mod;
+        }
+    }
+    return ans;
+}
