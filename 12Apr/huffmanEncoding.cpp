@@ -24,13 +24,19 @@ void preorder (TreeNode* root, vector<string>& order, string curr){
     preorder(root->right, order, nn);
 }
 
+struct comp{
+    bool operator()( int a , int b){
+        return a <= b;
+    }
+};
+
 int main(){
     string str;
     cin>>str;
     int  n = str.length();
     int f[n] ; 
     for( int i = 0 ; i< n ; i++ ) cin>>f[i];
-    multimap<int, TreeNode* > s;
+    multimap<int, TreeNode*, comp > s;
     int cnt = 0;
     long long  ans = 0;
     for( long long i = 0 ; i < n ; i++ ){
