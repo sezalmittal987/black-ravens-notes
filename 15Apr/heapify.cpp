@@ -4,9 +4,8 @@ using namespace std;
 
 
 bool compare( int a, int b) {
-    // return a > b ;
-    if( a%2 == 0 ) return true;
-    return false;
+    // return a < b ; // max heap
+    return a > b; // min heap 
 }
 
 void printHeap( vector<int> & a){
@@ -21,8 +20,8 @@ void heapify(vector<int>& a, int i){
     int l = 2*i + 1;
     int r = 2*i + 2;
     int largest = i ;// maximum node of three( parent, left, right)
-    if( l < n and a[l] > a[largest]) largest = l;
-    if( r < n and a[r] > a[largest]) largest = r;
+    if( l < n and compare(a[largest], a[l]) ) largest = l;
+    if( r < n and compare(a[largest], a[r])) largest = r;
     swap(a[i], a[largest]);
     if( largest != i ) heapify( a, largest);
 }
@@ -43,7 +42,7 @@ void insertNode( vector<int>& a, int x){
     int curr = a.size() -1 ;
     while( curr > 0 ){
         int parent = (curr - 1)/2;
-        if( a[parent] < a[curr] ) swap(a[parent] , a[curr]);
+        if( compare(a[parent] , a[curr]) ) swap(a[parent] , a[curr]);
         curr = parent; 
     }
     printHeap(a);
@@ -60,6 +59,7 @@ int main(){
     for( int i = n-1 ; i >= 0 ; i-- ){
         heapify( a, i);
     }
+    printHeap(a);
     insertNode(a, 11);
     popNode(a);
 }
