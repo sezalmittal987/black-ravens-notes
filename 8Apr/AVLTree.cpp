@@ -67,7 +67,7 @@ TreeNode* insertNode(TreeNode* root, int key){
         root = rightRotate(root);
     }
     // RL
-    else if( bf == -2 and  key < root->right->data){
+    else if( bf = -2 and  key < root->right->data){
         root->right = rightRotate(root->right);
         root = leftRotate(root);
     }
@@ -92,47 +92,16 @@ vector<int> levelOrderTraversal(TreeNode* root){
 int main(){
     TreeNode* root = NULL;
     root = insertNode(root, 8);
-    vector<int> ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }
     root = insertNode(root, 9);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 10);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 2);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 1);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 5);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 3);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 6);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 4);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }root = insertNode(root, 7);
-    cout<<endl;ans = levelOrderTraversal(root);
-    for( int i = 0 ; i < ans.size() ;i++){
-        cout<<ans[i]<<" ";
-    }
+    root = insertNode(root, 10);
+    root = insertNode(root, 1);
+    root = insertNode(root, 2);
+    root = insertNode(root, 3);
+    root = insertNode(root, 5);
+    root = insertNode(root, 6);
+    root = insertNode(root, 7);
+    root = insertNode(root, 4);
+    
     cout<<endl;ans = levelOrderTraversal(root);
     for( int i = 0 ; i < ans.size() ;i++){
         cout<<ans[i]<<" ";
