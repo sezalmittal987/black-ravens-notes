@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void backtrack(vector<int>& a, vector<vector<int>>& ans, vector<int> curr){
+void backtrack(vector<int>& a, vector<vector<int>>& ans, vector<int>& curr){
     if( curr.size() == a.size()) {
         ans.push_back(curr);
         return;
