@@ -25,7 +25,6 @@ void heapSort( int* a, int n){
         cout<<a[i]<<" ";
     }
     cout<<endl;
-
 }
 
 int main(){
