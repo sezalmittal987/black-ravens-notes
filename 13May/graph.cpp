@@ -60,10 +60,15 @@ int main(){
     }
     // g.bfs(5);
     int visited[n+1] = {};
+    int connectedComponents = 0;
     for( int i = 1 ; i <= n ; i++){
         if( visited[i] == 0 ){
+            // run dfs for each connected component
+            connectedComponents++;
             g.dfs(i, visited);
         }
     }
+    cout<<endl;
+    cout<<connectedComponents<<endl;
     
 }
