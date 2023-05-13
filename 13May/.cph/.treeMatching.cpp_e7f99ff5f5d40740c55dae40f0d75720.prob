@@ -1,0 +1,1 @@
+{"name":"Local: treeMatching","url":"/home/sezal/VSC/Placewit/13May/treeMatching.cpp","tests":[{"id":1683962696294,"input":"5\n1 2\n1 3\n3 4\n3 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/13May/treeMatching.cpp","group":"local","local":true}
