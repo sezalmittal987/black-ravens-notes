@@ -26,8 +26,11 @@ class Tree{
         // print root
         cout<<arr[n]<<" ";
         // call recur for children;
-        for( int i = 0 ; i < adj[n].size() ;i++){
-            if( adj[n][i] != p) dfs(adj[n][i], n);
+        // for( int i = 0 ; i < adj[n].size() ;i++){
+        //     if( adj[n][i] != p) dfs(adj[n][i], n);
+        // }
+        for( auto u : adj[n]){
+            if( u != p) dfs( u, n);
         }
     }
 
