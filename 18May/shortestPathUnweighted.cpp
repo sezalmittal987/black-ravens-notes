@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n, m;
+    cin>>n>>m;
+    vector<int> adj[n+1];
+    for( int i = 0 ; i < m ; i++){
+        int u, v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    int source;
+    cin>>source;
+    int dist[n+1] = {};
+    int visited[n+1] = {};
+    // bfs
+    queue<int> q;
+    q.push(source);
+    visited[source] = true;
+    while(!q.empty()){
+        auto p = q.front();
+        q.pop();
+        for( auto child : adj[p]){
+            if( visited[child] == true ) continue;
+            q.push(child);
+            visited[child] = true;
+            dist[child] = dist[p] + 1;
+        }
+    }
+    for( int i = 1 ; i <= n  ; i++){
+        cout<<dist[i]<<" ";
+    }
+    cout<<endl;
+}
