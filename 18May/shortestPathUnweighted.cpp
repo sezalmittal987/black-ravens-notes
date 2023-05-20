@@ -14,18 +14,17 @@ int main(){
     int source;
     cin>>source;
     int dist[n+1] = {};
-    int visited[n+1] = {};
+    for( int i = 1; i<= n ; i++) dist[i] = -1; // -1 means node hasn't been marked/visited
     // bfs
     queue<int> q;
     q.push(source);
-    visited[source] = true;
+    dist[source] = 0;
     while(!q.empty()){
         auto p = q.front();
         q.pop();
         for( auto child : adj[p]){
-            if( visited[child] == true ) continue;
+            if( dist[child] > -1 ) continue;
             q.push(child);
-            visited[child] = true;
             dist[child] = dist[p] + 1;
         }
     }
