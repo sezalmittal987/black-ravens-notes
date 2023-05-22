@@ -25,8 +25,8 @@ class Solution {
         dp[s] = 0;
         // for each path length
         for( int k = 1; k < n ; k++){
-            
             // traverse each edge
+            // Edge Relaxation
             for( auto edge : edges){
                 int u = edge[0];
                 int v = edge[1];
