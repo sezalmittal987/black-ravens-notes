@@ -17,9 +17,8 @@ void dfs( int n, int p, vector<int>* adj, int* disc, int* low, int* ap){
         else{
             children++;
             dfs(child, n, adj, disc, low, ap);
-
             //here, we exclude parent to exclude leaf
-            if( p != -1 and disc[n] <= low[child] ) ap[n] = 1;
+            if( p != -1 and disc[n] <= low[child] )ap[n] = 1;
             low[n] = min( low[n], low[child]);
         }
     }
@@ -65,11 +64,12 @@ using namespace std;
 
 class Solution {
   public:
-    void dfs( int n, int p, int& t, vector<int>* adj, int* disc, int* low, vector<int> ap){
+    void dfs( int n, int p, int& t, vector<int>* adj, int* disc, int* low, vector<int>& ap){
         disc[n] = t;
         low[n] = t;
         t++;
         int children = 0;
+        bool flag = false;
         for( auto child : adj[n]){
             if( child == p ) continue;
             if( disc[child] > 0 ){
@@ -79,11 +79,11 @@ class Solution {
             else{
                 children++;
                 dfs(child, n, t, adj, disc, low, ap);
-                if( p != -1 and disc[n] <= low[child] ) ap.push_back(n);
+                if( p != -1 and disc[n] <= low[child] ) flag = true;
                 low[n] = min( low[n], low[child]);
             }
         }
-        if( p == -1 and children > 1) {
+        if( flag or (p == -1 and children > 1)) {
             ap.push_back(n);
         }
         return;
@@ -100,6 +100,8 @@ class Solution {
                 dfs(i, -1, t, adj, disc, low, ap);
             }
         }
+        sort(ap.begin(), ap.end());
+        if( ap.empty()) ap.push_back(-1);
         return ap;
     }
 };
