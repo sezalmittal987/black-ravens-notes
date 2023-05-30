@@ -1,0 +1,1 @@
+{"name":"Local: codeforces25D","url":"/home/sezal/VSC/Placewit/30May/codeforces25D.cpp","tests":[{"id":1685463842750,"input":"7\n1 2\n2 3\n3 1\n4 5\n5 6\n6 7\n","output":""},{"id":1685463952304,"input":"2\n1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sezal/VSC/Placewit/30May/codeforces25D.cpp","group":"local","local":true}
