@@ -11,7 +11,7 @@ void dfs( int n, int p, vector<int>* adj, int* disc, int* low, int* ap){
     for( auto child : adj[n]){
         if( child == p ) continue;
         if( disc[child] > 0 ){
-            // there is a back edge
+            // there is a back edge/forward edge
             low[n] = min( low[n], disc[child]);
         }
         else{
