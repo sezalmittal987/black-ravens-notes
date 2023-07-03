@@ -8,10 +8,15 @@ vector<int> lpsArray(string p){
     int m = p.length();
     vector<int> lps(m);
     lps[0] = 0;
+    int j = 0;
     for( int i = 1 ;i < m ; i++ ){
         if( p[i] == p[lps[i-1]] ) lps[i] = lps[i-1] + 1;
         else {
-            if( p[i] == p[0]) lps[i] = 1;
+            j = lps[i-1];
+            while( j > 0 and p[j] != p[i] ){
+                j = lps[j-1];
+            }
+            if( p[j] == p[i] ) lps[i] = (j?lps[j-1]:0) + 1;
             else lps[i] = 0;
         }
     }
